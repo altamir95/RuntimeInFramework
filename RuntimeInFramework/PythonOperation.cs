@@ -31,7 +31,9 @@ namespace RuntimeInFramework
             {
                 scope.Exec(
                     // передаем тескт скрипта
-                    File.ReadAllText(@"C:\PythonData\script.py")
+                    File.ReadAllText(
+                        Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Files", @"script.py")
+                        )
                     );
 
                 // Запускаем необходимый нам метод в скрипте Python
